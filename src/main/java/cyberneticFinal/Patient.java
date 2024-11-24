@@ -19,7 +19,7 @@ public class Patient {
     public Patient(String id, String name, int age, String bloodType,
                    String organNeeded, int urgencyLevel, LocalDate registrationDate, String status) {
         // Validation
-        if (!id.matches("PAT-\\d{4}")) throw new IllegalArgumentException("Invalid ID format");
+        if (!id.matches("PAT-\\d{3}")) throw new IllegalArgumentException("Invalid ID format");
         if (age < 1 || age > 120) throw new IllegalArgumentException("Patient age is invalid.");
         if (!bloodType.matches("A[+-]|B[+-]|AB[+-]|O[+-]")) throw new IllegalArgumentException("Patient blood type is invalid.");
         if (!organNeeded.matches("HEART|LUNG|KIDNEY|LIVER")) throw new IllegalArgumentException("Invalid organ type");
